@@ -38,7 +38,7 @@ def write_to_db():
 
     try:
         with pool.connect() as db_conn:
-            # Replace 'resume_views' with your actual table name
+            # Replace 'resume_views' with the final table name
             insert_stmt = sqlalchemy.text(
                 "INSERT INTO resume_views (visitor_name) VALUES (:visitor_name)"
             )
