@@ -32,13 +32,10 @@ def write_to_db():
     if not data:
         return jsonify({"error": "No data provided"}), 400
 
-    # Example: Inserting a visitor name or timestamp
-    # Adjust 'visitor_name' to match your JavaScript payload
     visitor_name = data.get("name", "Anonymous")
 
     try:
         with pool.connect() as db_conn:
-            # Replace 'resume_views' with the final table name
             insert_stmt = sqlalchemy.text(
                 "INSERT INTO resume_views (visitor_name) VALUES (:visitor_name)"
             )
