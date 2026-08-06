@@ -4,6 +4,7 @@ With cloud platforms like Google Cloud Platform (GCP) an essential part of data 
 ## Project Log
 - Wrote python script for Cloud Run function, EPastore 07/26/2026
 - Updated backend documentation, EPastore 07/27/2026
+- Started test script, EPastore 08/06/2026
 
 
 
