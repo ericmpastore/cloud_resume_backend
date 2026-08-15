@@ -6,6 +6,7 @@ With cloud platforms like Google Cloud Platform (GCP) an essential part of data 
 - Updated backend documentation, EPastore 07/27/2026
 - Started test script, EPastore 08/06/2026
 - Continued deployment of Cloud Run function, EPastore 08/12/2026
+- Continued test script, EPastore 08/15/2026
 
 
 
