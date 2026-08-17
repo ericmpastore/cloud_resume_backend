@@ -8,6 +8,11 @@ import pymysql
 
 _connection = None
 
+# cloud-resume-2026:us-east4:free-trial-first-project
+# cloud_resume
+# admin
+# 3
+# numbers, id, value, created_at
 
 def get_connection():
     global _connection
@@ -15,10 +20,10 @@ def get_connection():
         _connection = pymysql.connect(
             # Cloud Run mounts the Cloud SQL connection at this Unix socket path
             # once the instance is attached under the function's "Connections" tab.
-            unix_socket=f"/cloudsql/{os.environ['INSTANCE_CONNECTION_NAME']}",
-            user=os.environ['DB_USER'],
+            unix_socket=f"/cloudsql/{os.environ['cloud-resume-2026:us-east4:free-trial-first-project']}",
+            user=os.environ['admin'],
             password=os.environ['DB_PASS'],
-            database=os.environ['DB_NAME'],
+            database=os.environ['cloud_resume'],
             autocommit=True,
         )
     return _connection
@@ -28,7 +33,7 @@ def get_connection():
 def write_number(request):
     # CORS: allow the static site's origin (your load-balanced domain) to call this function.
     headers = {
-        'Access-Control-Allow-Origin': os.environ.get('ALLOWED_ORIGIN', '*'),
+        'Access-Control-Allow-Origin': os.environ.get('https://www.siqify.com', '*'),
         'Access-Control-Allow-Methods': 'POST, OPTIONS',
         'Access-Control-Allow-Headers': 'Content-Type',
         'Content-Type': 'application/json',
