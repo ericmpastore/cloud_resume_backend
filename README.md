@@ -7,7 +7,9 @@ With cloud platforms like Google Cloud Platform (GCP) an essential part of data 
 - Started test script, EPastore 08/06/2026
 - Continued deployment of Cloud Run function, EPastore 08/12/2026
 - Continued test script, EPastore 08/15/2026
-
+- Updated requirements.txt, EPastore 08/16/2026
+- Updated main.py, EPastore 08/17/2026
+- Continued deployment of Cloud Run function write-number, EPastore 08/18/2026
 
 
 
