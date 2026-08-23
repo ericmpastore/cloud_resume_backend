@@ -14,6 +14,7 @@ With cloud platforms like Google Cloud Platform (GCP) an essential part of data 
 - Deployed Cloud Run function, EPastore 08/20/2026
 - Began troubleshooting deployment errors, EPastore 08/21/2026
 - Successfully deployed Cloud Run function, started Cloud Build, EPastore 08/22/2026
+- Continued troubleshooting Cloud Build, EPastore 08/23/2026
 
 
 
