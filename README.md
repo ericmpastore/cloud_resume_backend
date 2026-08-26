@@ -16,6 +16,8 @@ With cloud platforms like Google Cloud Platform (GCP) an essential part of data 
 - Successfully deployed Cloud Run function, started Cloud Build, EPastore 08/22/2026
 - Continued troubleshooting Cloud Build, EPastore 08/23/2026
 - Continued troubleshooting Cloud Build, EPastore 08/24/2026
+- Added Dockerfile to repo, EPastore 08/25/2026
+- Verified successful build, EPastore 08/26/2026
 
 
 
