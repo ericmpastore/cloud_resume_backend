@@ -18,6 +18,7 @@ With cloud platforms like Google Cloud Platform (GCP) an essential part of data 
 - Continued troubleshooting Cloud Build, EPastore 08/24/2026
 - Added Dockerfile to repo, EPastore 08/25/2026
 - Verified successful build, EPastore 08/26/2026
+- Tested cloud build, EPastore 09/04/2026
 
 
 
