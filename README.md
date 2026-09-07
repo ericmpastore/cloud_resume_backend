@@ -21,6 +21,7 @@ With cloud platforms like Google Cloud Platform (GCP) an essential part of data 
 - Tested cloud build, EPastore 09/04/2026
 - Began rebuilding cloud run function, EPastore 09/05/2026
 - Continued rebuilding cloud run function, EPastore 09/06/2026
+- Continued rebuilding cloud run function, EPastore 09/07/2026
 
 
 
