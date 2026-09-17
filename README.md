@@ -31,6 +31,7 @@ With cloud platforms like Google Cloud Platform (GCP) an essential part of data 
 - Began building Terraform template for backend configuration, EPastore 09/14/2026
 - Continued building Terraform template for backend configuration, EPastore 09/15/2026
 - Continued building Terraform template for backend configuration, EPastore 09/16/2026
+- Drafted v1 of cloud run build guide, EPastore 09/17/2026
 
 
 
