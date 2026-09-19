@@ -33,6 +33,7 @@ With cloud platforms like Google Cloud Platform (GCP) an essential part of data 
 - Continued building Terraform template for backend configuration, EPastore 09/16/2026
 - Drafted v1 of cloud run build guide, EPastore 09/17/2026
 - Continued v1 of cloud run build guide, EPastore 09/18/2026
+- Continued v1 of cloud run build guide, EPastore 09/19/2026
 
 
 
