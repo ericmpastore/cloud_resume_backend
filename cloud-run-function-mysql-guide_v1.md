@@ -16,6 +16,18 @@ The browser loads `index.html`/`script.js` from a Cloud Storage bucket that sits
 
 Replace every `PROJECT_ID`, `REGION`, `INSTANCE_ID`, `yourdomain.com`, etc. below with your real values.
 
+For convenience, enter your project values here:
+Cloud Storage Bucket
+`NAME`: cloud-resume-pastore
+
+`PROJECT_ID`: 
+`REGION`: us-east4(-a)
+`INSTANCE_ID`:
+`yourdomain.com`: https://www.siqify.com
+
+Cloud SQL
+`INSTANCE_ID`: free-trial-first-project
+`INSTANCE_CONNECTION_NAME`: cloud-resume-2026:us-east4:free-trial-first-project
 ---
 
 ## 0. Prerequisites
@@ -82,7 +94,7 @@ Run `terraform init` once in that folder. Every "Terraform equivalent" subsectio
 
 ---
 
-## 1. Prepare the database (existing Cloud SQL instance)
+## 1. Prepare the database (existing Cloud SQL instance) - ADD FULL STEPS FOR CLOUD SQL SETUP
 
 1. Console → **SQL** → click your instance → note the **Connection name** shown on the Overview page. It looks like `PROJECT_ID:REGION:INSTANCE_ID` — you'll need this exact string later.
 2. Create a database (skip if you already have one):
