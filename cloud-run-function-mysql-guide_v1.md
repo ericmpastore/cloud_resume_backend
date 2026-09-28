@@ -32,11 +32,11 @@ Cloud SQL
 
 ## 0. Prerequisites
 
-- An existing Cloud SQL for MySQL instance (you confirmed you have one).
-- Owner/Editor access on the GCP project, or equivalently: Cloud Functions Admin, Cloud SQL Admin, Storage Admin, Load Balancer Admin, IAM Admin.
+- An existing Cloud SQL for MySQL instance
+- Owner/Editor access on the GCP project, or equivalently: Cloud Functions Admin, Cloud SQL Admin, Storage Admin, Load Balancer Admin, IAM Admin
 - APIs enabled: **Cloud Run**, **Cloud Build**, **Artifact Registry**, **Cloud SQL Admin API**, **Compute Engine API** (for the load balancer). Enable any of these from **APIs & Services → Library** in the console if they're not already on.
 
-### Terraform equivalent: project setup
+### Terraform Equivalent: Project Setup
 
 Every section below also gets a **Terraform equivalent** subsection, showing how to build the same resource as code instead of clicking through the console. Use one approach or the other per resource — don't manage the same thing both ways, or `terraform apply` and your console clicks will fight each other.
 
