@@ -20,7 +20,7 @@ For convenience, enter your project values here:
 Cloud Storage Bucket
 `NAME`: cloud-resume-pastore
 
-`PROJECT_ID`: 
+`PROJECT_ID`: cloud-resume-2026
 `REGION`: us-east4(-a)
 `INSTANCE_ID`:
 `yourdomain.com`: https://www.siqify.com
@@ -79,12 +79,12 @@ data "google_project" "current" {
 and a `variables.tf` you'll keep adding to as later sections introduce new inputs:
 ```hcl
 variable "project_id" {
-  description = "Your GCP project ID"
+  description = `PROJECT_ID`
   type        = string
 }
 
 variable "region" {
-  description = "Region for all resources (match your Cloud SQL instance's region)"
+  description = `REGION` (match your Cloud SQL instance's region)
   type        = string
   default     = "us-central1"
 }
