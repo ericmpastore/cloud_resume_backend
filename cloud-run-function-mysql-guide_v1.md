@@ -4,15 +4,16 @@
 
 ```
 Browser (loads static site from GCS bucket behind HTTPS Load Balancer)
-   │  client-side script.js
+   │  counter.js
+   │  index.html
    ▼
 POST https://REGION-PROJECT_ID.cloudfunctions.net/write-number
    │  Cloud Run function (Python, functions-framework, 2nd gen)
    ▼
-Cloud SQL for MySQL  (existing instance, via Unix socket connection)
+Cloud SQL for MySQL  (via Unix socket connection)
 ```
 
-The browser loads `index.html`/`script.js` from a Cloud Storage bucket that sits behind an HTTPS Application Load Balancer. That script calls your Cloud Run function's HTTPS endpoint directly (a separate origin), which is why the function needs CORS headers. The function writes each number into a `numbers` table in your existing Cloud SQL MySQL instance.
+The browser loads `index.html`/`script.js` from a Cloud Storage bucket that sits behind an HTTPS Application Load Balancer. That script calls your Cloud Run function's HTTPS endpoint directly (a separate origin), which is why the function needs CORS headers. The function writes each number into a `visitors` table in your Cloud SQL MySQL instance.
 
 Replace every `PROJECT_ID`, `REGION`, `INSTANCE_ID`, `yourdomain.com`, etc. below with your real values.
 
@@ -22,7 +23,6 @@ Cloud Storage Bucket
 
 `PROJECT_ID`: cloud-resume-2026
 `REGION`: us-east4(-a)
-`INSTANCE_ID`:
 `yourdomain.com`: https://www.siqify.com
 
 Cloud SQL
@@ -32,15 +32,18 @@ Cloud SQL
 
 ## 0. Prerequisites
 
-- An existing Cloud SQL for MySQL instance
+- A Google Cloud Platform (GCP) account
 - Owner/Editor access on the GCP project, or equivalently: Cloud Functions Admin, Cloud SQL Admin, Storage Admin, Load Balancer Admin, IAM Admin
-- APIs enabled: **Cloud Run**, **Cloud Build**, **Artifact Registry**, **Cloud SQL Admin API**, **Compute Engine API** (for the load balancer). Enable any of these from **APIs & Services → Library** in the console if they're not already on.
+- APIs enabled: **Cloud Run**, **Cloud Build**, **Artifact Registry**, **Cloud SQL Admin API**, **Compute Engine API** (for the load balancer). Enable any of these from **APIs & Services → Library** in the console if not already on.
+- Completed Google Cloud Leader certification
+- Resume document in HTML format, in a file named index.html
+- JS file counter.js
 
 ### Terraform Equivalent: Project Setup
 
-Every section below also gets a **Terraform equivalent** subsection, showing how to build the same resource as code instead of clicking through the console. Use one approach or the other per resource — don't manage the same thing both ways, or `terraform apply` and your console clicks will fight each other.
+Every section below also has a **Terraform equivalent** subsection, showing how to build the same resource as code instead of clicking through the console. Use one approach or the other per resource. Don't manage the same resource both ways, or `terraform apply` and your console clicks will cancel each other.
 
-Extra prerequisites for the Terraform path:
+Extra prerequisites for the Terraform path (NEED SPECIFIC STEPS TO SETUP TF):
 - [Terraform](https://developer.hashicorp.com/terraform/install) 1.5+ (or run it from Cloud Shell, which has it preinstalled).
 - `gcloud auth application-default login` run once, so the Google provider can authenticate.
 - A GCS bucket to hold Terraform's state file, created before `terraform init`:
