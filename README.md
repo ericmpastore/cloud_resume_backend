@@ -44,6 +44,7 @@ With cloud platforms like Google Cloud Platform (GCP) an essential part of data 
 - Added variables.tf file and updated build guide, EPastore 09/30/2026
 - Continued v1 of cloud run build guide, EPastore 10/01/2026
 - Continued v1 of cloud run build guide, EPastore 10/02/2026
+- Continued v1 of cloud run build guide, EPastore 10/03/2026
 
 
 
