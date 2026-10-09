@@ -50,6 +50,7 @@ With cloud platforms like Google Cloud Platform (GCP) an essential part of data 
 - Continued v1 of cloud run build guide, EPastore 10/06/2026
 - Continued v1 of cloud run build guide, EPastore 10/07/2026
 - Continued v1 of cloud run build guide, EPastore 10/08/2026
+- Continued v1 of cloud run build guide, EPastore 10/09/2026
 
 
 
