@@ -68,13 +68,13 @@ Your development PC                              GCP project: cloud-resume-2026
 
 **Step 1 — on your development PC, one-time.** Install [Terraform](https://developer.hashicorp.com/terraform/install) 1.5+. (Running everything from Cloud Shell instead is a fine alternative — it has Terraform preinstalled and skips this step — but since you're working from a local folder, the rest of this walkthrough assumes your own machine.)
 
-**Step 2 — on your development PC, one-time.** Authenticate so Terraform can talk to GCP using *your* identity:
+**Step 2 — on your development PC, one-time.** Authenticate so Terraform can talk to GCP using your identity:
 ```bash
 gcloud auth application-default login
 ```
 This opens a browser sign-in, then saves credentials to a file on your PC (`~/.config/gcloud/application_default_credentials.json` on macOS/Linux, `%APPDATA%\gcloud\application_default_credentials.json` on Windows). Every `terraform plan`/`apply` you run locally reads this file to authenticate its calls to the Google Cloud APIs — nothing more to configure for auth after this.
 
-**Step 3 — create the state bucket, one-time.** This command can be run from your local terminal (if `gcloud` is installed there) or from Cloud Shell — either way, *where you type the command* doesn't matter, because the bucket it creates lives in GCP, not wherever you ran it from:
+**Step 3 — create the state bucket one time.** This command can be run from your local terminal (if `gcloud` is installed there) or from Cloud Shell — either way, *where you type the command* doesn't matter, because the bucket it creates lives in GCP, not wherever you ran the command:
 ```bash
 gcloud storage buckets create gs://cloud-resume-2026-tfstate --location=us-east4 --uniform-bucket-level-access
 ```
