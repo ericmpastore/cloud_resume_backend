@@ -52,7 +52,7 @@ Challenge requirement 8 suggests Firestore for the visitor counter. This build u
 
 Every section below also has a **Terraform equivalent** subsection, showing how to build the same resource as code instead of clicking through the console. This is how challenge requirement 12 (Infrastructure as Code) is satisfied for the database, cloud function, and everything else besides your application source code. Use one approach or the other per resource. Don't manage the same resource both ways, or `terraform apply` and your console clicks will cancel each other.
 
-**Where things actually live:** The Terraform path is more difficult because unlike the console (which runs entirely in the browser, against GCP), Terraform splits the development work across three locations:
+**Where resources actually live:** The Terraform path is more difficult because unlike the console (which runs entirely in the browser, against GCP), Terraform splits the development work across three locations:
 
 | Where | What lives there |
 |---|---|
@@ -81,6 +81,8 @@ Your development PC                              GCP project: cloud-resume-2026
 ```bash
 gcloud auth application-default login
 ```
+**Note:** If you receive an error, run `pip install gcloud` to install the gcloud package first.
+
 This opens a browser sign-in, then saves credentials to a file on your PC (`~/.config/gcloud/application_default_credentials.json` on macOS/Linux, `%APPDATA%\gcloud\application_default_credentials.json` on Windows). Every `terraform plan`/`apply` you run locally reads this file to authenticate its calls to the Google Cloud APIs — nothing more to configure for auth after this.
 
 **Step 3 — create the state bucket, one-time.** This command can be run from your local terminal (if `gcloud` is installed there) or from Cloud Shell — either way, *where you type the command* doesn't matter, because the bucket it creates lives in GCP, not wherever you ran it from:
