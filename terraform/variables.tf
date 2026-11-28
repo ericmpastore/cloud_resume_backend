@@ -1,4 +1,3 @@
-```hcl
 variable "project_id" {
   description = cloud-resume-2026
   type        = string
@@ -9,4 +8,3 @@ variable "region" {
   type        = string
   default     = "us-central1"
 }
-```

@@ -1,4 +1,3 @@
-hcl
 terraform {
   required_version = ">= 1.5"
 
@@ -9,8 +8,10 @@ terraform {
     }
   }
 
+  # Points Terraform at the remote state file living in your GCP project —
+  # not at a file on this PC.
   backend "gcs" {
-    bucket = "PROJECT_ID-tfstate"
+    bucket = "cloud-resume-2026-tfstate"
     prefix = "cloud-resume"
   }
 }
